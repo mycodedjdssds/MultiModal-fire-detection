@@ -1,0 +1,30 @@
+title = "TOML Example"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = 0
+savemodel = true
+modelsavepath = "InertialModel(100epoch,dropout=0.5,lr=0.001).pt"
+
+[input]
+batchsize = 100
+numworkers = 20
+shuffle = true
+
+[training]
+epoch = 25
+statsfrequency = 100
+dataset = "/home/whj/zxm/new"
+learningrate = 0.006
+momentum = 0.9
+weightdecay = 0.0001
+
+[validation]
+dataset = "/home/whj/zxm/new"
+saveaccuracy = true
+accuracyfilelocation = "accuracymodel1.txt"
+
+
+[testing]
+resultfilelocation = "testingmodel1.txt"

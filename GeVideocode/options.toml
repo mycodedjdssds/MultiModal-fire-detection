@@ -1,0 +1,30 @@
+title = "TOML Example"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = 0
+savemodel = true
+modelsavepath = "VideoModel新数据epoch=7.pt"
+
+[input]
+batchsize = 16
+numworkers = 8
+shuffle = true
+
+[training]
+epoch = 7
+statsfrequency = 100
+dataset = "/home/whj/zxm/new"
+learningrate = 0.006
+momentum = 0.9
+weightdecay = 0.0001
+
+[validation]
+dataset = "/home/whj/zxm/new"
+saveaccuracy = true
+accuracyfilelocation = "accuracymodel1.txt"
+
+
+[testing]
+resultfilelocation = "testingmodel1.txt"
